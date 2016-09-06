@@ -1,11 +1,13 @@
 # tag-counter
 
-A tag counter is a server program that accepts text file uploads,
+A tag counter is a **stateless** server program that accepts text file uploads,
 processes each upload and returns the top 10 tag list across all
 processed uploads.
 
 # Why/Purpose?/What for/Raison d'être
 This is a coding challenge / exercise in coding
+
+Use whatever language you wish, but keep to the requirements below.
 
 # Requirements
 
@@ -30,8 +32,11 @@ The Server should be capable of handling multiple text uploads and
 return the the top 10 Tags, across all processed uploads, as a response.
 
 ## 7) Stateless
-The server shouldn't hold on to state anywhere. Not during the processing
-of each upload or across all uploads.
+The server shouldn't hold on to state anywhere.
+No Global state across all uploads, no state during the processing of each upload.
+
+**This is the main challenge** *Aim for as much statelessnes as possible*
+
 
 ## 8) Limitation on 3rd Party Libraries
 The actual processing of the uploads and the collecting of the top 10
