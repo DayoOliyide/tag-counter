@@ -32,8 +32,10 @@ The Server should be capable of handling multiple text uploads and
 return the the top 10 Tags, across all processed uploads, as a response.
 
 ## 7) Stateless
-The server shouldn't hold on to state anywhere.
-No Global state across all uploads, no state during the processing of each upload.
+The code that processes each file upload, extracts the tags and sorts them
+per their occurrence, shouldn't hold on to any state.
+There can be a global state (e.g storing state in db, memory) but try and
+avoid state in your code as much as you can.
 
 **This is the main challenge** *Aim for as much statelessnes as possible*
 
